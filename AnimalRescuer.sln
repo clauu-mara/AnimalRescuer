@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalRescuer", "..\AnimalRescuer\AnimalRescuer\AnimalRescuer.csproj", "{D8DFFE1F-A01F-47D1-9087-E09CB1D77941}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalRescuer1", "AnimalRescuer1\AnimalRescuer1.csproj", "{86925269-F07D-467E-9FBB-716248A8E864}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimalRescuer", "..\AnimalRescuer\AnimalRescuer\AnimalRescuer.csproj", "{60424F9E-BD6C-41E1-BD37-103B7D8FB9AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D8DFFE1F-A01F-47D1-9087-E09CB1D77941}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8DFFE1F-A01F-47D1-9087-E09CB1D77941}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8DFFE1F-A01F-47D1-9087-E09CB1D77941}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8DFFE1F-A01F-47D1-9087-E09CB1D77941}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86925269-F07D-467E-9FBB-716248A8E864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86925269-F07D-467E-9FBB-716248A8E864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86925269-F07D-467E-9FBB-716248A8E864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86925269-F07D-467E-9FBB-716248A8E864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60424F9E-BD6C-41E1-BD37-103B7D8FB9AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60424F9E-BD6C-41E1-BD37-103B7D8FB9AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60424F9E-BD6C-41E1-BD37-103B7D8FB9AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60424F9E-BD6C-41E1-BD37-103B7D8FB9AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
