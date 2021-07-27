@@ -35,7 +35,7 @@ namespace AnimalRescuer1
         public Parents Adults1 { get => adults; set => adults = value; }
         public Vet Vet1 { get => vet; set => vet = value; }
     }
-    
+
     class Program
     {
         static void Main(string[] args)
@@ -264,11 +264,70 @@ namespace AnimalRescuer1
             Console.WriteLine("---------------------------------");
 
             DogFood dogFood = new DogFood();
+            dogFood.AnimalName = dog;
             dogFood.AnimalName.SpiritState = 2;
             dogFood.AnimalName.FeelingHungry = 5;
             dog.ComplexData(dogFood);
 
+            kids.Gender = "fetita";
+            kids.Height = "mica";
+            kids.Age = 7;
+            kids.HairColor = Color.Red;
+            adults.Gender = "tatal";
+            adults.Height = "inalt";
+            Console.WriteLine("Intr-o zi o {0} {1} de {2} ani, cu par {3} si iubitoare de animale," +
+                " a intrat impreuna cu {4} ei {5} intr-un adapost de animale, pentru a adopta un animal.", kids.Gender,kids.Height,
+                kids.Age,kids.HairColor,adults.Gender,adults.Height);
+            Console.WriteLine(" {0} s-a indragostit de un catel, care era o corcitura de {1}.", kids.Gender,dog.Breed);
+            dog.SpiritState = 1;
+            dog.Spirit();
+
+            Console.WriteLine("{0} l-a adoptat si i-a pus un nume frumos.",kids.Gender);
+            dog.SpiritState = 3;
+            Console.WriteLine("Cainele a fost foarte {0} la inceput, asa ca {1} il hranea cu mancare pentru catei.",dog.State(),kids.Gender);
+
+            dog.Gender = "catelul";
+
+            Console.WriteLine("Dupa catva timp, {0}, in varsta de {1} ani,{2}, si {3}.",dog.Gender, dog.Age,dog.GetWeight(),dog.Energy()); 
+
+            Console.WriteLine(" Fetita a inceput sa se joace cu el, iar pe masura ce o facea tot mai mult, catelul a inceput sa fie tot mai sanatos, sa arate tot mai bine."); 
+            Console.WriteLine("Intr-o zi {0} l-a dus la veterniar, care i-a facut vaccinurile periodice si deparazitare.",kids.Gender); 
+            Console.WriteLine("Catelului i-a fost foarte frica de veterniar si inainte ca acesta sa ii aplice tratamentul medical, dar dupa a primit tratamentul, i-a fost si mai frica.");
+
+            vet.AssistantGender = "asistenta";
+            vet.AssistantMood = "draguta";
+            string[] actions = dog.Actions();
+            Console.WriteLine("Noroc cu {0} {1} care il {2} si {3} in timpul tratamentului, calmandu-l. ",vet.AssistantGender,vet.AssistantMood,actions[0], actions[1]);
+
+            dog.Gender = "catel";
+            Console.WriteLine("Dupa ce {0} l-a hranit pe {1} cu hrana umeda pentru ceva timp," +
+                " acesta s-a ingrasat asa ca a trebuit sa ii schimbe hrana cu un tip de hrana speciala pentru catei, care era mai putin calorica. ",kids.Gender,dog.Gender);
+
+            dog.Gender = "catelul";
+            Console.WriteLine("Pentru a-l face sa slabeasca {0} kg, {1} avea rutina aceasta cu {2}, aproape zilnic: ",dog.LoseWeight(),kids.Gender,dog.Gender); 
+
+            Console.WriteLine("- Dupa trezire, ii dadea de mancare , cu acea mancare speciala  {0} si il scotea la {1}. ",dog.DogFood, activity.HumanActivity(dog)); 
+
+
+            Console.WriteLine("Ajungeau acasa, {0} {1}, {2} facea teme. ", dog.Gender,activity.Activity(dog),kids.Gender);
+
+            dog.FavoriteToy = "mingea";
+
+            Console.WriteLine(" {0} se trezea, si {1} se juca cu {2} cu el in gradina. ",dog.Gender,kids.Gender,dog.FavoriteToy);
+            
+            Console.WriteLine(" Seara {0} il mai scotea inca o data pe catel afara la {1}, si pe urma {2} manca din nou si {3}. ",kids.Gender, activity.HumanActivity(dog), dog.Gender, activity.Activity(dog)); 
+
+            Console.WriteLine(" Cu rutina aceasta, fetita a reusit sa ii tina sub control nevoile si greutatea catelului. "); 
+
+
+
+
+
+
+
+
             Console.ReadLine();
+
 
 
         }

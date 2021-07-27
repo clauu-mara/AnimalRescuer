@@ -18,8 +18,8 @@ namespace AnimalRescuer1.Adopters
         private  Color hairColor;
         private  string favoriteAnimal;
         private  int numberOfAnimals;
-        private double height;
-        private bool animalLover;
+        private string height;
+        private int age;
 
         public string HumanName
         {
@@ -34,9 +34,8 @@ namespace AnimalRescuer1.Adopters
         public Color HairColor { get; set; }
         public string FavoriteAnimal { get; set; }
         public int NumberOfAnimals { get; set; }
-        public double Height { get; set; }
-        public bool AnimalLover { get; set; }
-
+        public string Height { get; set; }
+        public int Age { get; set; }
         public bool CheckTheAdopter()
         {
             if(Salary>300 || NumberOfAnimals<4)

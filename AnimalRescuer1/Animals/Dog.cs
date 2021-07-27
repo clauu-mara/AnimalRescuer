@@ -40,5 +40,15 @@ namespace AnimalRescuer1.Animals
 
             Console.WriteLine("Energy level : {0}, HungryLevel: {1}", EnergyLevel, HungryLevel);
         }
+
+        public string Energy()
+        {
+            if (EnergyLevel > 10)
+                return "a inceput sa se simta mai energic";
+            else
+                return " nu are energie";
+        }
+
+
     }
 }

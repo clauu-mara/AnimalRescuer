@@ -121,6 +121,39 @@ namespace AnimalRescuer1.Animals
             Console.WriteLine("The favorite food is :" + FavoriteFood);
         }
 
+        public void Spirit()
+        {
+            if (SpiritState < 2 && kilos==2)
+                Console.WriteLine("Cainele, era foarte nefericit, slab si nu voia sa manance");
+        }
+
+        public string State()
+        {
+            if (SpiritState > 2 && SpiritState < 5)
+                return "fricos";
+            else
+                return "nu e fricos";
+        }
+
+        public string GetWeight()
+        {
+            do
+            {
+                kilos++;
+            } while (kilos <= 10);
+            return " a inceput sa ia in greutate";
+        }
+
+        public string[] Actions()
+        {
+            string[] actions = new string[] { "mangaia", "alinta" };
+            return actions;
+        }
+        public double LoseWeight()
+        {
+            kilos--;
+            return kilos;
+        }
         public abstract void Speak();
     }
 

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AnimalRescuer1.Animals;
+using AnimalRescuer1.Adopters;
 
 namespace AnimalRescuer1
 {
@@ -42,6 +43,30 @@ namespace AnimalRescuer1
                     Console.WriteLine("No more activities");
                     break;
             }
+        }
+
+        public string Activity(Animal animal)
+        {
+            if (animal.Name.Equals("Dog"))
+            {
+                return "culca";
+            }
+            else if (animal.Name.Equals("Cat"))
+            {
+                return "se juca";
+            }
+            else
+                return "altceva";
+        }
+
+        public string HumanActivity(Animal animal)
+        {
+            if (animal.Gender.Equals("catelul"))
+                return "plimbare";
+            else if (animal.Gender.Equals("pisica"))
+                return "somn";
+            else
+                return "altceva";
         }
     }
 }
