@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Drawing;
+using AnimalRescuer1.Animals;
 
 namespace AnimalRescuer1
 {
-
     class Game
     {
         Adopter adopter;
@@ -40,8 +40,9 @@ namespace AnimalRescuer1
         static void Main(string[] args)
         {
 
-            Animal animal = new Animal();
+            /*Animal animal = new Animal();
             animal.Name = "cat";
+            animal.Gender = "female";
             animal.Age = 8;
             animal.HealthState = 10;
             animal.FeelingHungry = 1;
@@ -49,6 +50,11 @@ namespace AnimalRescuer1
             animal.FavoriteFood = " KiteKat";
             animal.FavoriteActivity = " purrs";
             animal.HealthCard = true;
+            animal.AnimalColor = Color.Black;
+            animal.Kilos = 3;
+            animal.LastBath = DateTime.Today;
+            animal.FavoriteToy = "mouse";
+            animal.AnimalsNumber = 4;
             Console.WriteLine("New info :");
             Console.WriteLine("Animal name:" + animal.Name);
             Console.WriteLine("Animal age:" + animal.Age);
@@ -58,7 +64,12 @@ namespace AnimalRescuer1
             Console.WriteLine("Animal favorite food:" + animal.FavoriteFood);
             Console.WriteLine("Animal favorite activity:" + animal.FavoriteActivity);
             Console.WriteLine("Animal health card:" + animal.HealthCard);
-            Console.WriteLine("\n");
+            Console.WriteLine("Animal kilos:" + animal.Kilos);
+            Console.WriteLine("Animal color:" + animal.AnimalColor);
+            Console.WriteLine("Animal last bath:" + animal.LastBath);
+            Console.WriteLine("Animal favorite toy:" + animal.FavoriteToy);
+            Console.WriteLine("Number of animals:" + animal.AnimalsNumber);
+            Console.WriteLine("\n");*/
 
 
             Dog dog = new Dog();
@@ -89,6 +100,12 @@ namespace AnimalRescuer1
             Console.WriteLine("Adopter occupation :" + adopter.Occupation);
             adopter.Salary = 12000;
             Console.WriteLine("Adopter salary :" + adopter.Salary);
+            adopter.HairColor = Color.Red;
+            Console.WriteLine("Hair color:" + adopter.HairColor);
+            adopter.FavoriteAnimal = "cat";
+            Console.WriteLine("Favorite animal:" + adopter.FavoriteAnimal);
+            adopter.NumberOfAnimals = 4;
+            Console.WriteLine("Number of animals:" + adopter.NumberOfAnimals);
             Console.WriteLine("\n");
 
             Animal_Food food = new Animal_Food();
@@ -103,8 +120,9 @@ namespace AnimalRescuer1
             Console.WriteLine("Animal food dateTime :" + food.ExpirationDate);
             food.Availability = 6;
             Console.WriteLine("Animal food availability :" + food.Availability);
+            food.AnimalName = dog;
+            Console.WriteLine("The animal name is: " + food.AnimalName);
             Console.WriteLine("\n");
-
 
 
             Recreation_Activity activity = new Recreation_Activity();
@@ -146,6 +164,7 @@ namespace AnimalRescuer1
             cat.LastBath = DateTime.Now.AddYears(-1);
             Console.WriteLine("CAT last bath:" + cat.LastBath);
             cat.Age = 1;
+            cat.Kilos = 21;
             Console.WriteLine("CAT age:" + cat.Age);
             Console.WriteLine("\n");
 
@@ -186,28 +205,65 @@ namespace AnimalRescuer1
             Animal duck1 = new Duck();
             duck.FavoriteFood = "idk";
             duck.FavoriteActivity = "Swimming";
-            Console.WriteLine("Eat method:");
-            duck.AnimalEats(animal,food);
-            Console.WriteLine("Sleep method:");
-            duck1.AnimalSleeping(animal);
-
-            Animal rabbit = new Rabbit();
+            duck.DuckFood = "idk";
+            Console.WriteLine("---------------------------------");
+            Rabbit rabbit = new Rabbit();
             rabbit.FavoriteFood = "carrots";
             rabbit.FavoriteActivity = "eating";
+            rabbit.RabbitFood = "carrots";
+            Console.WriteLine("---------------------------------");
+
+
+            //Methods
             Console.WriteLine("Eat method:");
-            animal.AnimalEats(rabbit,food);
+            duck.AnimalEats(food);
+            Console.WriteLine("Sleep method:");
+            duck1.AnimalSleeping();
+            Console.WriteLine("The animal is playing?");
+            duck1.isPlaying();
+           
+            
+            Console.WriteLine("Eat method:");
+            rabbit.AnimalEats(food);
             Console.WriteLine("Check last bath:");
-            animal.CheckLastBath(rabbit);
-            animal.CheckLastBath(cat);
+            rabbit.CheckLastBath();
+            cat.CheckLastBath();
+            Console.WriteLine("---------------------------------");
 
             Console.WriteLine("Check calories:");
-            cat.Kilos = 21;
             food.CheckCalories(cat);
+            Console.WriteLine("Check DateTime:");
+            food.CheckDateTime();
+            Console.WriteLine("---------------------------------");
 
-            Console.WriteLine("Select the animal by his favorite food");
+            Console.WriteLine("Select the animal by his favorite activity:");
             activity.SelectActivity(rabbit);
+            Console.WriteLine("---------------------------------");
+
+            Console.WriteLine("Check if the adopter can take care of the animal");
+            adopter.CheckTheAdopter();
+            Console.WriteLine("What do you want to adopt?");
+            adopter.AdoptAnimal();
+            Console.WriteLine("---------------------------------");
+
+            Console.WriteLine("How much the vet works:");
+            vet.Working();
+
+            Console.WriteLine("---------------------------------");
+            dog.DisplayFood();
+            cat.DisplayFood();
+            duck.DisplayFood();
+            rabbit.DisplayFood();
+
+            Console.WriteLine("---------------------------------");
+            dog.Speak();
+            cat.Speak();
+            duck1.Speak();
+            rabbit.Speak();
 
             Console.ReadLine();
+
+
         }
     }
 }

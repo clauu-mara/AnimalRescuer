@@ -20,5 +20,16 @@ namespace AnimalRescuer1
         public string Gender { get; set; }
         public int WorkHours { get; set; }
         public string AnimalName { get; set; }
+
+        public void Working()
+        {
+            if (WorkHours > 8)
+                Console.WriteLine("The vet worked too much");
+            else if(WorkHours<=6)
+                Console.WriteLine("The vet worked too little");
+            else 
+                Console.WriteLine("The vet worked enough.");
+
+        }
     }
 }

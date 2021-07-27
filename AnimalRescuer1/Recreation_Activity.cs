@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AnimalRescuer1.Animals;
 
 namespace AnimalRescuer1
 {
     class Recreation_Activity
     {
-        string activityName;
-        string environment;
-        int participantsNumber;
-        int animalsNumber;
+        private  string activityName;
+        private  string environment;
+        private  int participantsNumber;
+        private  int animalsNumber;
 
         public string Name { get => activityName; set => activityName = value; }
         public string Environment { get => environment; set => environment = value; }
@@ -23,25 +24,24 @@ namespace AnimalRescuer1
             switch (activityName)
             {
                 case "running":
-                    Console.WriteLine("The animal which is doing this activity is a {0} ",animal.Name);
+                    Console.WriteLine("This activity is specific to a {0} ",animal.Name);
                     break;
                 case "sleeping":
-                    Console.WriteLine("The animal which is doing this activity is a {0} ", animal.Name);
+                    Console.WriteLine("This activity is specific to a {0} ", animal.Name);
                     break;
                 case "purrs":
-                    Console.WriteLine("The animal which is doing this activity is a {0} ", animal.Name);
+                    Console.WriteLine("This activity is specific to a {0} ", animal.Name);
                     break;
                 case "eating":
-                    Console.WriteLine("The animal which is doing this activity is a {0} ", animal.Name);
+                    Console.WriteLine("This activity is specific to a {0} ", animal.Name);
                     break;
                 case "swimming":
-                    Console.WriteLine("The animal which is doing this activity is a {0} ", animal.Name);
+                    Console.WriteLine("This activity is specific to a {0} ", animal.Name);
                     break;
                 default:
-                    Console.WriteLine("No are no more activities");
+                    Console.WriteLine("No more activities");
                     break;
             }
         }
-
     }
 }

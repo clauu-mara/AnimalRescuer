@@ -5,22 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace AnimalRescuer1
+namespace AnimalRescuer1.Animals
 {
-    class Animal
+    abstract class Animal
     {
-        string name;
-        string gender;
-        int age;
-        int healthState;
-        int feelingHungry;
-        int spiritState;
-        string favoriteFood;
-        string favoriteActivity;
-        bool healthCard;
-        Color animalColor;
-        double kilos;
-        DateTime lastBath;
+        private string name;
+        private  string gender;
+        private int age;
+        private int healthState;
+        private  int feelingHungry;
+        private int spiritState;
+        private string favoriteFood;
+        private string favoriteActivity;
+        private bool healthCard;
+        private Color animalColor;
+        private double kilos;
+        private  DateTime lastBath;
+        private string favoriteToy;
+        private int animalsNumber;
 
         public string Name { get; set; } = "Dog";
 
@@ -52,7 +54,11 @@ namespace AnimalRescuer1
         public double Kilos { get; set; } = 3;
         public DateTime LastBath { get; set; } = DateTime.Today;
 
-        public double AnimalEats(Animal animal,Animal_Food animalFood)
+        public string FavoriteToy { get; set; }
+
+        public int AnimalsNumber { get; set; }
+
+        public double AnimalEats(Animal_Food animalFood)
         {
             switch(animalFood.FoodName)
             {
@@ -74,64 +80,45 @@ namespace AnimalRescuer1
             }
             if (animalFood.Quantity > 5)
             {
-                animal.SpiritState++;
-                animal.FeelingHungry--;
-                animal.HealthState++;
-                animal.Kilos++;
+                SpiritState++;
+                FeelingHungry--;
+                HealthState++;
+                Kilos++;
             }
-            Console.WriteLine("The new kilos:" + animal.Kilos);
+            Console.WriteLine("The new kilos:" + Kilos);
 
-            if (animal.HealthState > 8 && animal.SpiritState >5)
+            if (HealthState > 8 && SpiritState >5)
                 Console.WriteLine("The animal feels better.");
-            if (animal.FeelingHungry < 5)
+            if (FeelingHungry < 5)
                 Console.WriteLine("The animal in no more hungry ");
 
-            return animal.Kilos;
+            return Kilos;
          
         }
-        public void AnimalSleeping(Animal animal)
+        public void AnimalSleeping()
         {
-            if (animal.spiritState < 5)
+            if (spiritState < 5)
                 Console.WriteLine("The animal is sleepy");
         }
 
-        public void CheckLastBath(Animal animal)
+        public void CheckLastBath()
         {
-            if (animal.LastBath > DateTime.Now.AddDays(360))
+            if (LastBath > DateTime.Now.AddDays(360))
                 Console.WriteLine("You should take it a bath");
         }
 
-        public void isPlaying(Animal animal)
+        public void isPlaying()
         {
-            if (animal.SpiritState > 9)
+            if (SpiritState > 9)
                 Console.WriteLine("The animal is playing");
         }
+
+        public void DisplayFood()
+        {
+            Console.WriteLine("The favorite food is :" + FavoriteFood);
+        }
+
+        public abstract void Speak();
     }
 
-    class Dog : Animal
-    {
-        string breed;
-        string dogFood;
-
-        public string Breed { get => breed; set => breed = value; }
-        public string DogFood { get; set; }
-    }
-    class Cat : Animal
-    {
-        string breed;
-        string catFood;
-
-        public string Breed { get => breed; set => breed = value; }
-        public string CatFood { get;set; }
-    }
-    class Duck : Animal
-    {
-        int eggs;
-        public int Eggs { get; set; } = 5;
-    }
-    class Rabbit:Animal
-    {
-        int babies;
-        public int Babies { get; set; } = 10;
-    }
 }
