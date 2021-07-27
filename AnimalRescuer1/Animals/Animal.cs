@@ -112,8 +112,11 @@ namespace AnimalRescuer1.Animals
             if (SpiritState > 9)
                 Console.WriteLine("The animal is playing");
         }
-
-        public void DisplayFood()
+        public virtual void animalSound()
+        {
+            Console.WriteLine("The animal make a sound ");
+        }
+        public virtual void DisplayFood()
         {
             Console.WriteLine("The favorite food is :" + FavoriteFood);
         }

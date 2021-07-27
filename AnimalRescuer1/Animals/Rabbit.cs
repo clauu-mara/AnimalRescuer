@@ -12,7 +12,7 @@ namespace AnimalRescuer1.Animals
         private string rabbitFood;
         public int Babies { get; set; } = 10;
         public string RabbitFood { get; set; }
-        public void DisplayFood()
+        public override void DisplayFood()
         {
             Console.WriteLine("The food is:" + RabbitFood);
         }

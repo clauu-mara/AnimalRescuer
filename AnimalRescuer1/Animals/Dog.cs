@@ -19,11 +19,14 @@ namespace AnimalRescuer1.Animals
         public int EnergyLevel { get; set; }
 
         public int HungryLevel { get; set; }
-        public void DisplayFood()
+        public override void DisplayFood()
         {
             Console.WriteLine("The food is:" + DogFood);
         }
-
+        public override void animalSound()
+        {
+            Console.WriteLine("The dog says: bow bow");
+        }
         public override void Speak()
         {
             Console.WriteLine("The animal speaks!");

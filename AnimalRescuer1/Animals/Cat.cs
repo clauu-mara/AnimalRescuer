@@ -14,7 +14,7 @@ namespace AnimalRescuer1.Animals
         public string Breed { get => breed; set => breed = value; }
         public string CatFood { get =>catFood; set => catFood=value; }
 
-        public void DisplayFood()
+        public override void DisplayFood()
         {
             Console.WriteLine("The food is:" + CatFood);
         }
