@@ -9,7 +9,7 @@ namespace AnimalRescuer1.Animals
     class Duck:Animal
     {
         int eggs;
-        string duckFood;
+        string duckFood="greenery";
         public int Eggs { get; set; } = 5;
         public string DuckFood { get; set; }
         public void DisplayFood()
@@ -20,5 +20,15 @@ namespace AnimalRescuer1.Animals
         {
             Console.WriteLine("The animal speaks!");
         }
+        public void Display()
+        {
+            Console.WriteLine("Food:" + duckFood);
+        }
+        public void EggsNumber()
+        {
+            Console.WriteLine("Eggs number:" + eggs);
+        }
+
+
     }
 }

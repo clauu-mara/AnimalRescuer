@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using AnimalRescuer1.Animals;
+using AnimalRescuer1.Adopters;
 
 namespace AnimalRescuer1
 {
@@ -260,6 +261,12 @@ namespace AnimalRescuer1
             cat.Speak();
             duck1.Speak();
             rabbit.Speak();
+            Console.WriteLine("---------------------------------");
+
+            DogFood dogFood = new DogFood();
+            dogFood.AnimalName.SpiritState = 2;
+            dogFood.AnimalName.FeelingHungry = 5;
+            dog.ComplexData(dogFood);
 
             Console.ReadLine();
 

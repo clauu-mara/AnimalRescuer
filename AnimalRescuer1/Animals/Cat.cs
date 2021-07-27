@@ -12,7 +12,7 @@ namespace AnimalRescuer1.Animals
         private string catFood;
 
         public string Breed { get => breed; set => breed = value; }
-        public string CatFood { get; set; }
+        public string CatFood { get =>catFood; set => catFood=value; }
 
         public void DisplayFood()
         {

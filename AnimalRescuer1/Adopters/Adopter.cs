@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using AnimalRescuer1.Animals;
 
-namespace AnimalRescuer1
+namespace AnimalRescuer1.Adopters
 {
     class Adopter
     {
@@ -18,6 +18,8 @@ namespace AnimalRescuer1
         private  Color hairColor;
         private  string favoriteAnimal;
         private  int numberOfAnimals;
+        private double height;
+        private bool animalLover;
 
         public string HumanName
         {
@@ -32,6 +34,8 @@ namespace AnimalRescuer1
         public Color HairColor { get; set; }
         public string FavoriteAnimal { get; set; }
         public int NumberOfAnimals { get; set; }
+        public double Height { get; set; }
+        public bool AnimalLover { get; set; }
 
         public bool CheckTheAdopter()
         {
@@ -104,18 +108,11 @@ namespace AnimalRescuer1
                     break;
             }
         }
+
+        public void Display()
+        {
+            Console.WriteLine();
+        }
     }
-    class Kids:Adopter
-    {
-        int friendsNumber;
-        int parentsNumber;
-        public int FriendsNumber { get; set; } = 4;
-        public int ParentsNumber { get; set; } = 2;
-        
-    }
-    class Parents:Adopter
-    {
-        int kidsNumber;
-        public int KidsNumber { get; set; } = 2;
-    }
+
 }

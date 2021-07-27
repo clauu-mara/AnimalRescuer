@@ -20,5 +20,11 @@ namespace AnimalRescuer1.Animals
         {
             Console.WriteLine("The animal speaks!");
         }
+
+        public int BabiesNumber()
+        {
+            Babies = AnimalsNumber / 2;
+            return babies;
+        }
     }
 }

@@ -11,13 +11,13 @@ namespace AnimalRescuer1
     {
         private  string activityName;
         private  string environment;
-        private  int participantsNumber;
-        private  int animalsNumber;
+        //private  int participantsNumber;
+        //private  int animalsNumber;
 
         public string Name { get => activityName; set => activityName = value; }
         public string Environment { get => environment; set => environment = value; }
-        public int ParticipantsNumber { get; set; }
-        public int AnimalsNumber { get; set; }
+        //public int ParticipantsNumber { get; set; }
+        //public int AnimalsNumber { get; set; }
 
         public void SelectActivity(Animal animal)
         {

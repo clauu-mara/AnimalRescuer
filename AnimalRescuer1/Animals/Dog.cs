@@ -10,10 +10,15 @@ namespace AnimalRescuer1.Animals
     {
        private string breed;
        private string dogFood;
+       private int energyLevel;
+        private int hungryLevel;
 
         public string Breed { get => breed; set => breed = value; }
         public string DogFood { get; set; }
 
+        public int EnergyLevel { get; set; }
+
+        public int HungryLevel { get; set; }
         public void DisplayFood()
         {
             Console.WriteLine("The food is:" + DogFood);
@@ -24,5 +29,13 @@ namespace AnimalRescuer1.Animals
             Console.WriteLine("The animal speaks!");
         }
 
+        public void ComplexData(DogFood food)
+        {
+            EnergyLevel = (int)food.Calories + 10 + (int)food.Quantity;
+            if(food.AnimalName.SpiritState <5 && food.AnimalName.Kilos <4)
+            { HungryLevel = food.AnimalName.FeelingHungry; }
+
+            Console.WriteLine("Energy level : {0}, HungryLevel: {1}", EnergyLevel, HungryLevel);
+        }
     }
 }
